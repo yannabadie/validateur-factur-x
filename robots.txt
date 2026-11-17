@@ -1,3 +1,2 @@
 User-agent: *
 Allow: /
-Sitemap: https://yannabadie.github.io/validateur-factur-x/sitemap.xml

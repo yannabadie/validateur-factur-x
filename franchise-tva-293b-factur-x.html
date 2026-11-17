@@ -1,65 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Franchise en base de TVA (art. 293 B) et Factur-X : comment faire une facture conforme</title>
-  <meta name="description" content="Comment déclarer la franchise en base de TVA dans une facture électronique Factur-X EN 16931 : catégorie de TVA, code d&#x27;exonération, mentions et erreurs fréquentes." />
-  <link rel="canonical" href="https://yannabadie.github.io/validateur-factur-x/franchise-tva-293b-factur-x.html" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Franchise en base de TVA (art. 293 B) et Factur-X : comment faire une facture conforme" />
-  <meta property="og:description" content="Comment déclarer la franchise en base de TVA dans une facture électronique Factur-X EN 16931 : catégorie de TVA, code d&#x27;exonération, mentions et erreurs fréquentes." />
-  <meta property="og:url" content="https://yannabadie.github.io/validateur-factur-x/franchise-tva-293b-factur-x.html" />
-  <link rel="stylesheet" href="./studio_seo.css" />
-  <style>.nav-inner{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:.9rem 1.2rem}.nav-inner a{text-decoration:none;font-weight:600}</style>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Franchise en base de TVA (293 B) : réussir sa facture Factur-X", "description": "Comment déclarer la franchise en base de TVA dans une facture électronique Factur-X EN 16931 : catégorie de TVA, code d'exonération, mentions et erreurs fréquentes.", "inLanguage": "fr-FR", "dateModified": "2026-11-17", "url": "https://yannabadie.github.io/validateur-factur-x/franchise-tva-293b-factur-x.html", "author": {"@type": "Person", "name": "Yann Abadie"}, "publisher": {"@type": "Organization", "name": "YGN"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Faut-il un numéro de TVA intracommunautaire en franchise ?", "acceptedAnswer": {"@type": "Answer", "text": "En règle générale non pour des ventes en France ; votre identifiant légal sur la facture électronique est votre SIREN."}}, {"@type": "Question", "name": "La mention 293 B suffit-elle dans le PDF ?", "acceptedAnswer": {"@type": "Answer", "text": "Elle reste obligatoire en clair, mais la partie XML doit aussi coder l'exonération (catégorie et motif) pour être exploitable par la Plateforme Agréée."}}]}</script>
+  <meta charset="UTF-8">
+  <title>Franchise en base de TVA (293 B) : réussir sa facture Factur-X — déplacé vers FacturKit 2027</title>
+  <link rel="canonical" href="https://yannabadie.github.io/facturkit-2027/guides/franchise-tva-293b-factur-x.html">
+  <meta http-equiv="refresh" content="0; url=https://yannabadie.github.io/facturkit-2027/guides/franchise-tva-293b-factur-x.html">
+  <meta name="robots" content="noindex, follow">
+  <script>location.replace("https://yannabadie.github.io/facturkit-2027/guides/franchise-tva-293b-factur-x.html");</script>
 </head>
 <body>
-  <header class="site-header"><nav class="nav-inner">
-    <a class="brand-link" href="./">✦ Validateur Factur-X gratuit</a>
-    <a class="nav-link" href="./#section-b2b-offers">Offres TPE</a>
-  </nav></header>
-  <main>
-    <section class="product-hero" style="display:block">
-      <h1>Franchise en base de TVA (293 B) : réussir sa facture Factur-X</h1>
-      <p class="lead">Comment déclarer la franchise en base de TVA dans une facture électronique Factur-X EN 16931 : catégorie de TVA, code d&#x27;exonération, mentions et erreurs fréquentes.</p>
-      <div class="btn-row"><a class="btn-primary" href="./">🔎 Tester une facture gratuitement →</a></div>
-    </section>
-      <section class="section-block"><h2>Le principe</h2><p>En franchise en base, vous ne facturez pas de TVA et la mention <strong>« TVA non applicable, art. 293 B du CGI »</strong> reste obligatoire. Dans une facture électronique, cette information doit aussi être <strong>codée</strong> dans le XML, pas seulement écrite en texte.</p></section>
-      <section class="section-block"><h2>Ce que le XML doit contenir</h2><ul><li>Une <strong>catégorie de TVA d'exonération</strong> sur chaque ligne et dans le récapitulatif TVA, avec un taux de 0.</li><li>Un <strong>motif d'exonération</strong> : le libellé de la mention 293 B et le code attendu par les spécifications françaises (<code>VATEX-FR-FRANCHISE</code>).</li><li>Un montant total de TVA égal à <strong>0,00</strong> avec sa devise.</li><li>Votre <strong>SIREN</strong> comme identifiant légal ; pas de numéro de TVA intracommunautaire inventé.</li></ul></section>
-      <section class="section-block"><h2>Les erreurs les plus fréquentes</h2><ol><li>Utiliser la catégorie « taux standard » avec un taux de 0 % au lieu d'une catégorie d'exonération.</li><li>Écrire la mention 293 B uniquement dans une note libre, sans motif d'exonération codé.</li><li>Oublier le montant total de TVA (même nul) ou sa devise.</li><li>Indiquer un numéro de TVA intracommunautaire alors que vous êtes en franchise.</li></ol><p>Le <a href="./">validateur gratuit</a> détecte ces quatre cas et propose une correction automatique.</p></section>
-    <section class="section-block"><h2>Questions fréquentes</h2>
-      <div class="faq-list">
-        <details class="faq-item"><summary>Faut-il un numéro de TVA intracommunautaire en franchise ?</summary><p>En règle générale non pour des ventes en France ; votre identifiant légal sur la facture électronique est votre SIREN.</p></details>
-        <details class="faq-item"><summary>La mention 293 B suffit-elle dans le PDF ?</summary><p>Elle reste obligatoire en clair, mais la partie XML doit aussi coder l&#x27;exonération (catégorie et motif) pour être exploitable par la Plateforme Agréée.</p></details>
-      </div>
-    </section>
-    <section class="section-block"><h2>Passer à l'action</h2>
-      <p>Le validateur est gratuit et fonctionne entièrement dans votre navigateur. Pour produire des factures conformes en routine :</p>
-      <div class="btn-row">
-          <a class="btn-secondary" href="https://buy.stripe.com/3cIaEWfnS8ifbTBdXH2cg05" target="_blank" rel="noopener">Pack Pilotage Micro &amp; TPE 2027 — 19 € →</a>
-          <a class="btn-secondary" href="https://buy.stripe.com/4gMcN40sY41Zf5N1aV2cg06" target="_blank" rel="noopener">Studio Factur-X Local 2027 — 49 € →</a>
-          <a class="btn-secondary" href="https://buy.stripe.com/aFa8wO0sY1TRbTB1aV2cg07" target="_blank" rel="noopener">Suite Pro TPE + n8n &amp; AI Act — 119 € →</a>
-          <a class="btn-secondary" href="https://buy.stripe.com/14A14m5NigOLcXF7zj2cg03" target="_blank" rel="noopener">Guide IA locale sur Mac — 29 € →</a>
-      </div>
-      <p><small>Ces outils ne remplacent pas une Plateforme Agréée : ils vous aident à préparer des fichiers conformes.</small></p>
-    </section>
-    <section class="section-block"><h2>Autres guides</h2>
-      <ul>
-          <li><a href="./facture-electronique-micro-entreprise-2027.html">Facture électronique en micro-entreprise : le guide 2026-2027</a></li>
-          <li><a href="./mentions-obligatoires-facture-2026.html">Factures 2026 : les 4 nouvelles mentions obligatoires</a></li>
-          <li><a href="./erreurs-calcul-totaux-en16931-br-co.html">Erreurs de totaux EN 16931 : les règles BR-CO expliquées</a></li>
-          <li><a href="./checklist-reforme-facturation-electronique-tpe.html">Réforme de la facturation électronique : la checklist TPE en 10 points</a></li>
-      </ul>
-      <h2>Outils de l'écosystème</h2>
-      <ul>
-        <li><a href="https://yannabadie.github.io/facturkit-2027/" rel="noopener">FacturKit 2027 — générateur de devis et factures Factur-X hors-ligne, sans abonnement</a></li>
-        <li><a href="https://yannabadie.github.io/facturkit-2027/audit-facture-gratuit.html" rel="noopener">Audit éclair d&#x27;une facture 2026-2027 (gratuit, dans le navigateur)</a></li>
-        <li><a href="https://github.com/yannabadie/facturx-france-2027" rel="noopener">facturx-france-2027 — validateur Factur-X open source en Python + GitHub Action</a></li>
-      </ul>
-    </section>
-  </main>
-  <footer class="site-footer"><p>YGN — Yann Abadie, Pau • TVA non applicable, art. 293 B du CGI • Contenu rédigé avec assistance IA, vérifié au 2026-11-17. Informations générales, ne constituant pas un conseil juridique ou fiscal.</p></footer>
+  <p>Cette page a déménagé : <a href="https://yannabadie.github.io/facturkit-2027/guides/franchise-tva-293b-factur-x.html">Franchise en base de TVA (293 B) : réussir sa facture Factur-X</a> sur FacturKit 2027.</p>
 </body>
 </html>
