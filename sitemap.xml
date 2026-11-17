@@ -6,4 +6,34 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://yannabadie.github.io/validateur-factur-x/facture-electronique-micro-entreprise-2027.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yannabadie.github.io/validateur-factur-x/franchise-tva-293b-factur-x.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yannabadie.github.io/validateur-factur-x/mentions-obligatoires-facture-2026.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yannabadie.github.io/validateur-factur-x/erreurs-calcul-totaux-en16931-br-co.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://yannabadie.github.io/validateur-factur-x/checklist-reforme-facturation-electronique-tpe.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
