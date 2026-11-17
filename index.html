@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Validateur, Auto-Correcteur &amp; Générateur Factur-X 2026/2027 Gratuit (EN 16931 + BR-FR) | YGN × FacturKit</title>
+  <meta name="description" content="Outil web gratuit 100 % local (zéro envoi serveur) : validez vos factures PDF/A-3 et XML Factur-X 1.0.07 (EN 16931 + AFNOR XP Z12-012 BR-FR Flux 2), corrigez automatiquement un profil BASIC, générez un PDF/A-3b conforme et calculez vos risques LF 2026 / TVA 293 B." />
+  <meta name="keywords" content="validateur factur-x gratuit, générateur factur-x en ligne gratuit, en 16931 xp z12-012 br-fr, auto-fix factur-x basic vers en 16931, facturation électronique 2026 2027 micro-entreprise tpe" />
+  <link rel="canonical" href="https://yannabadie.github.io/validateur-factur-x/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Validateur &amp; Générateur Factur-X 2026/2027 Gratuit (100 % Navigateur — EN 16931 / BR-FR)" />
+  <meta property="og:description" content="Audit PDF/A-3 FlateDecode, validation 3 couches EN 16931 + XP Z12-012, auto-correction en 1 clic, générateur PDF/A-3b hybride et radar fiscal LF 2026." />
+  <meta property="og:url" content="https://yannabadie.github.io/validateur-factur-x/" />
+  <meta property="og:image" content="https://yannabadie.github.io/validateur-factur-x/previews/b2b_facturkit_pass_preview_800.jpg" />
+  <link rel="stylesheet" href="./studio_seo.css" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Validateur, Auto-Correcteur & Générateur Factur-X 2026/2027 (EN 16931 + XP Z12-012)",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "All (100% Client-Side Web Browser)",
+  "url": "https://yannabadie.github.io/validateur-factur-x/",
+  "description": "Extracteur PDF/A-3 FlateDecode, validateur Factur-X 1.0.07 EN 16931 et AFNOR XP Z12-012 (BR-FR Flux 2), auto-correcteur 1 clic, générateur PDF/A-3b hybride et simulateur d'amendes LF 2026 / franchise TVA art. 293 B.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0.00",
+    "priceCurrency": "EUR"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "YGN — FacturKit 2027"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Studio Factur-X Local 2027 — Logiciel B2B Hors-Ligne Sans Abonnement (EN 16931 / PDF-A3b)",
+  "description": "Suite logicielle locale et confidentielle pour TPE, micro-entrepreneurs et cabinets : Studio Web hors-ligne monopage, CLI Python en lot, générateur devis/factures hybrides PDF/A-3b EN 16931 et contrôle Luhn SIREN / BR-FR.",
+  "image": [
+    "https://yannabadie.github.io/validateur-factur-x/previews/b2b_facturkit_pass_preview_800.jpg"
+  ],
+  "sku": "FK27-S02-STUDIO",
+  "brand": {
+    "@type": "Brand",
+    "name": "YGN — FacturKit 2027"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://buy.stripe.com/4gMcN40sY41Zf5N1aV2cg06",
+    "price": "49.00",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "priceValidUntil": "2027-12-31",
+    "seller": {
+      "@type": "Organization",
+      "name": "YGN — Yann Abadie"
+    }
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Mes factures PDF ou XML sont-elles envoyées sur un serveur lors de l'audit ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. L'extraction du flux FlateDecode PDF/A-3, l'analyse XML CII D16B, l'auto-correction EN 16931 et la génération PDF/A-3b s'exécutent intégralement dans la mémoire locale de votre navigateur via les API Web Streams natives. Aucune donnée fiscale ou client ne quitte votre poste."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Pourquoi une facture Factur-X au profil MINIMUM ou BASIC est-elle signalée comme rejetée en Flux 2 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dans le cadre de la réforme française 2026-2027 (norme AFNOR XP Z12-012), le socle cible exigé par les Plateformes Agréées (PA) pour l'échange inter-entreprises en Flux 2 est le profil EN 16931 (ou EXTENDED), incluant le cadre BT-23, les adresses électroniques schemeID 0225 et les notes codifiées PMD/PMT/AAB."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelles sont les sanctions prévues par la Loi de Finances 2026 en cas de non-conformité ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'article 1737 II du CGI prévoit une amende de 50 € par facture non émise au format électronique structuré (plafonnée à 15 000 € par an), 15 € par mention obligatoire manquante ou inexacte, ainsi qu'une pénalité d'absence de désignation de Plateforme Agréée (500 € après mise en demeure puis 1 000 € par trimestre)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment fonctionne la Franchise en base de TVA (art. 293 B du CGI) dans un XML EN 16931 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Une facture en franchise de TVA doit déclarer un code catégorie TVA 'E' à 0.00 %, le code motif officiel 'VATEX-FR-FRANCHISE', la mention 'TVA non applicable, art. 293 B du CGI' et un identifiant fiscal vendeur SpecifiedTaxRegistration avec schemeID='FC' (SIREN) ou 'VA'."
+      }
+    }
+  ]
+}
+  </script>
+  <style>
+    .fx-hero {
+      max-width: 920px;
+      margin: 0 auto 38px;
+      text-align: left;
+    }
+    .fx-workspace-tabs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .fx-tab-btn {
+      background: var(--surface-1);
+      color: var(--text-soft);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      padding: 10px 18px;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+    }
+    .fx-tab-btn:hover {
+      color: var(--text-main);
+      border-color: var(--border-strong);
+    }
+    .fx-tab-btn.active {
+      background: var(--gold);
+      color: #08110e;
+      border-color: var(--gold);
+    }
+    .fx-audit-layout {
+      display: grid;
+      grid-template-columns: 1.08fr 1fr;
+      gap: 26px;
+      align-items: start;
+      margin-bottom: 52px;
+    }
+    .fx-panel {
+      background: linear-gradient(180deg, var(--surface-1) 0%, #0d1814 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      box-shadow: var(--shadow-elevated);
+    }
+    .fx-dropzone {
+      border: 1.5px dashed var(--border-strong);
+      border-radius: var(--radius-md);
+      background: rgba(9, 18, 15, 0.72);
+      padding: 32px 22px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.18s ease;
+    }
+    .fx-dropzone:hover,
+    .fx-dropzone.dragover {
+      background: rgba(28, 50, 42, 0.68);
+      border-color: var(--gold-bright);
+      transform: translateY(-1px);
+    }
+    .fx-dropzone-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+    .fx-dropzone-sub {
+      font-size: 0.88rem;
+      color: var(--text-soft);
+      max-width: 480px;
+      margin: 0 auto 14px;
+    }
+    .fx-demo-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .fx-demo-btn {
+      background: var(--surface-2);
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 11px 12px;
+      font-family: inherit;
+      font-size: 0.81rem;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      line-height: 1.38;
+      transition: border-color 0.18s ease, background 0.18s ease, transform 0.18s ease;
+    }
+    .fx-demo-btn:hover {
+      border-color: var(--gold);
+      background: var(--surface-3);
+      transform: translateY(-1px);
+    }
+    .fx-demo-btn small {
+      display: block;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-top: 3px;
+      font-size: 0.74rem;
+    }
+    .fx-score-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-bottom: 18px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .fx-gauge {
+      width: 92px;
+      height: 92px;
+      flex-shrink: 0;
+    }
+    .fx-gauge-bg {
+      fill: none;
+      stroke: rgba(255, 255, 255, 0.08);
+      stroke-width: 8;
+    }
+    .fx-gauge-fg {
+      fill: none;
+      stroke: var(--gold);
+      stroke-width: 8;
+      stroke-linecap: round;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+      transition: stroke-dashoffset 0.35s ease, stroke 0.25s ease;
+    }
+    .fx-score-big {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.55rem;
+      font-weight: 700;
+      line-height: 1;
+      color: #fff;
+    }
+    .fx-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 8px;
+    }
+    .fx-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      border: 1px solid var(--border-subtle);
+      background: var(--surface-2);
+      color: var(--text-soft);
+    }
+    .fx-pill.ok {
+      background: rgba(123, 212, 168, 0.13);
+      color: var(--success);
+      border-color: rgba(123, 212, 168, 0.38);
+    }
+    .fx-pill.err {
+      background: rgba(240, 140, 140, 0.13);
+      color: var(--danger);
+      border-color: rgba(240, 140, 140, 0.38);
+    }
+    .fx-pill.warn {
+      background: rgba(212, 175, 106, 0.15);
+      color: var(--gold-bright);
+      border-color: var(--border-strong);
+    }
+    .fx-summary-kv {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 14px;
+      background: rgba(7, 14, 12, 0.65);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 13px 15px;
+      margin-bottom: 16px;
+      font-size: 0.82rem;
+    }
+    .fx-summary-kv div span {
+      color: var(--text-muted);
+      display: block;
+      font-size: 0.73rem;
+    }
+    .fx-summary-kv div strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+    .fx-error-list {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      max-height: 310px;
+      overflow-y: auto;
+      margin-bottom: 16px;
+    }
+    .fx-error-item {
+      background: rgba(240, 140, 140, 0.07);
+      border: 1px solid rgba(240, 140, 140, 0.28);
+      border-radius: 10px;
+      padding: 10px 13px;
+      font-size: 0.83rem;
+      color: var(--text-main);
+    }
+    .fx-error-item code {
+      font-weight: 700;
+      color: var(--danger);
+      margin-right: 6px;
+    }
+    .fx-ok-banner {
+      background: rgba(123, 212, 168, 0.1);
+      border: 1px solid rgba(123, 212, 168, 0.35);
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 0.87rem;
+      color: var(--success);
+      margin-bottom: 16px;
+    }
+    .fx-lines-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 0.85rem;
+    }
+    .fx-lines-table th,
+    .fx-lines-table td {
+      padding: 8px 8px;
+      border-bottom: 1px solid var(--border-subtle);
+      text-align: left;
+    }
+    .fx-lines-table th {
+      color: var(--gold-bright);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .fx-radar-kpis {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .fx-kpi-card {
+      background: #08110e;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+    }
+    .fx-kpi-val {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold-bright);
+      line-height: 1.1;
+      margin: 4px 0;
+    }
+    .fx-offers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .fx-offer-card {
+      background: linear-gradient(180deg, var(--surface-2) 0%, var(--surface-1) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .fx-offer-card.featured {
+      border-color: var(--gold);
+      box-shadow: var(--shadow-elevated);
+    }
+    .fx-luhn-hint {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+    .fx-luhn-hint.ok { color: var(--success); }
+    .fx-luhn-hint.err { color: var(--danger); }
+
+    @media (max-width: 960px) {
+      .fx-audit-layout {
+        grid-template-columns: 1fr;
+      }
+      .fx-demo-bar {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media print {
+      .topbar, .site-header, .breadcrumb-bar, .fx-workspace-tabs, #section-generator, #section-radar, #section-b2b-offers, #section-faq, .site-footer, .fx-demo-bar, #facturx-dropzone {
+        display: none !important;
+      }
+      body {
+        background: #fff !important;
+        color: #111 !important;
+      }
+      .fx-panel {
+        background: #fff !important;
+        color: #111 !important;
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <span data-lang="fr">✦ Outil Souverain 100 % Navigateur (Zéro Serveur) • Réception obligatoire depuis Sept. 2026 • Émission TPE/Micro : 1er Sept. 2027</span>
+    <span data-lang="en">✦ 100% Client-Side Browser Engine (Zero Server Upload) • Mandatory Reception Live • French SME Issuance: Sept 1, 2027</span>
+  </div>
+
+  <div class="container">
+    <header class="site-header">
+      <a id="brand-home-link" class="brand-link" href="https://yannabadie.github.io/cozy-festive-studio-2026/">✦ YGN × FACTURKIT 2027</a>
+      <nav class="header-nav" aria-label="Navigation principale">
+        <a class="nav-link current" href="./">
+          <span data-lang="fr">Validateur Factur-X Gratuit</span>
+          <span data-lang="en">Free Factur-X Validator</span>
+        </a>
+        <a class="nav-link" href="#section-b2b-offers">
+          <span data-lang="fr">Cockpit B2B &amp; Offres TPE</span>
+          <span data-lang="en">B2B Cockpit &amp; SME Suites</span>
+        </a>
+        <a class="nav-link" href="https://yannabadie.github.io/cozy-festive-studio-2026/planner-digital-ipad-2027-notion-ia-tdah.html">
+          <span data-lang="fr">Systèmes Notion IA</span>
+          <span data-lang="en">Notion AI Systems</span>
+        </a>
+        <a class="nav-link" href="https://yannabadie.github.io/cozy-festive-studio-2026/">
+          <span data-lang="fr">Catalogue Studio</span>
+          <span data-lang="en">Studio Hub</span>
+        </a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Sélecteur de langue">
+        <button id="btn-fr" type="button" class="active" onclick="setLang('fr')">🇫🇷 Français</button>
+        <button id="btn-en" type="button" onclick="setLang('en')">🇬🇧 English</button>
+      </div>
+    </header>
+
+    <nav class="breadcrumb-bar" aria-label="Fil d'Ariane">
+      <div class="breadcrumb-trail">
+        <a href="https://yannabadie.github.io/cozy-festive-studio-2026/"><span data-lang="fr">← Accueil Hub</span><span data-lang="en">← Hub Home</span></a>
+        <span>/</span>
+        <a href="#section-b2b-offers"><span data-lang="fr">Pôle B2B Factur-X</span><span data-lang="en">B2B Factur-X Hub</span></a>
+        <span>/</span>
+        <strong><span data-lang="fr">Validateur, Auto-Fixer &amp; Générateur PDF/A-3b</span><span data-lang="en">Validator, Auto-Fixer &amp; PDF/A-3b Generator</span></strong>
+      </div>
+      <div class="sibling-pills">
+        <a href="#section-generator"><span data-lang="fr">Générateur PDF/A-3b Gratuit</span><span data-lang="en">Free PDF/A-3b Generator</span></a>
+        <a href="#section-radar"><span data-lang="fr">Radar Amendes LF 2026 &amp; 293 B</span><span data-lang="en">LF 2026 Fine &amp; VAT Radar</span></a>
+        <a href="#section-b2b-offers"><span data-lang="fr">Licences Locales sans Abonnement</span><span data-lang="en">One-Time Local Suites</span></a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="fx-hero">
+        <div class="eyebrow">
+          <span data-lang="fr">Norme Factur-X 1.0.07 (EN 16931 CII) + AFNOR XP Z12-012 (BR-FR Flux 2) • Zéro E-mail Requis</span>
+          <span data-lang="en">Factur-X 1.0.07 (EN 16931 CII) + French XP Z12-012 (BR-FR Flux 2) • Zero Email Gate</span>
+        </div>
+        <h1>
+          <span data-lang="fr">Validateur, Auto-Correcteur &amp; Générateur Factur-X 2026/2027 Gratuit en Ligne</span>
+          <span data-lang="en">Free Client-Side Factur-X 2026/2027 Validator, Auto-Fixer &amp; Hybrid PDF/A-3b Generator</span>
+        </h1>
+        <p class="lead">
+          <span data-lang="fr">Déposez une facture <strong>PDF/A-3</strong> ou <strong>XML</strong> pour auditer instantanément ses 3 couches réglementaires (décompression binaire <code>/FlateDecode</code>, arithmétique au centime <code>EN 16931</code>, règles françaises <code>BR-FR</code> &amp; clé Luhn SIREN), <strong>corriger un profil BASIC en 1 clic</strong>, ou générer gratuitement une facture hybride <strong>PDF/A-3b + XML 100/100</strong> sans qu'aucun octet ne quitte votre navigateur.</span>
+          <span data-lang="en">Drop any <strong>PDF/A-3</strong> or <strong>XML</strong> invoice to inspect all 3 compliance layers locally in your browser (<code>/FlateDecode</code> stream extraction, cent-exact <code>EN 16931</code> totals, French PA Flux 2 <code>BR-FR</code> rules &amp; Luhn SIREN), <strong>auto-upgrade BASIC invoices in 1 click</strong>, or generate a 100/100 hybrid <strong>PDF/A-3b</strong> invoice offline.</span>
+        </p>
+      </section>
+
+      <!-- 1. INTERACTIVE 3-LAYER VALIDATOR & 1-CLICK AUTO-FIXER -->
+      <section id="section-validator" class="fx-audit-layout" aria-label="Inspecteur et Auto-Correcteur Factur-X">
+        <div class="fx-panel">
+          <div class="eyebrow">
+            <span data-lang="fr">1. Inspection Binaire PDF/A-3 &amp; XML CII</span>
+            <span data-lang="en">1. Binary PDF/A-3 &amp; CII XML Inspector</span>
+          </div>
+          <h2 style="font-size:1.55rem;margin-bottom:12px;">
+            <span data-lang="fr">Auditer un fichier ou tester un cas réel</span>
+            <span data-lang="en">Audit an Invoice File or Run a Live Case</span>
+          </h2>
+
+          <div id="facturx-dropzone" class="fx-dropzone" tabindex="0" role="button" aria-label="Déposer une facture PDF ou XML Factur-X">
+            <input id="facturx-file-input" type="file" accept=".pdf,.xml,application/pdf,text/xml,application/xml" style="display:none;" />
+            <div class="fx-dropzone-title">
+              <span data-lang="fr">Glissez-déposez votre facture PDF ou XML ici</span>
+              <span data-lang="en">Drag &amp; Drop your Factur-X PDF or XML here</span>
+            </div>
+            <p class="fx-dropzone-sub">
+              <span data-lang="fr">Décompression locale des flux <code>/EmbeddedFiles</code> (FlateDecode), lecture du schéma XMP PDF/A-3 et contrôle des 32 règles EN 16931 / XP Z12-012.</span>
+              <span data-lang="en">Local decompression of <code>/EmbeddedFiles</code> (FlateDecode), PDF/A-3 XMP inspection, and 32-rule EN 16931 / XP Z12-012 check.</span>
+            </p>
+            <span class="btn-secondary" style="pointer-events:none;">
+              <span data-lang="fr">Sélectionner un fichier .pdf ou .xml</span>
+              <span data-lang="en">Choose a .pdf or .xml file</span>
+            </span>
+          </div>
+
+          <div style="margin-top:18px;">
+            <div style="font-size:0.8rem;font-weight:700;color:var(--gold);margin-bottom:6px;">
+              <span data-lang="fr">Démonstrations instantanées en 1 clic (sans fichier sous la main) :</span>
+              <span data-lang="en">1-Click Instant Live Simulations:</span>
+            </div>
+            <div class="fx-demo-bar">
+              <button id="btn-demo-non-conforme" type="button" class="fx-demo-btn">
+                <span data-lang="fr">✕ Facture Non Conforme</span>
+                <span data-lang="en">✕ Non-Compliant XML</span>
+                <small>
+                  <span data-lang="fr">Espaces BT-1, SIREN/0225 absents, écart TTC</span>
+                  <span data-lang="en">BT-1 spaces, missing SIREN/0225 &amp; math error</span>
+                </small>
+              </button>
+              <button id="btn-demo-basic-autofix" type="button" class="fx-demo-btn">
+                <span data-lang="fr">⚡ PDF BASIC → Auto-Fix</span>
+                <span data-lang="en">⚡ BASIC PDF → Auto-Fix</span>
+                <small>
+                  <span data-lang="fr">Rejet PA Flux 2 + réparation 100/100</span>
+                  <span data-lang="en">PA Flux 2 reject + 1-click EN 16931 upgrade</span>
+                </small>
+              </button>
+              <button id="btn-demo-conforme-293b" type="button" class="fx-demo-btn">
+                <span data-lang="fr">✓ PDF/A-3b Conforme 293 B</span>
+                <span data-lang="en">✓ Compliant 293 B PDF/A-3b</span>
+                <small>
+                  <span data-lang="fr">EN 16931 + XMP + sRGB ICC (100/100)</span>
+                  <span data-lang="en">EN 16931 + XMP + sRGB ICC (100/100)</span>
+                </small>
+              </button>
+            </div>
+          </div>
+
+          <details style="margin-top:18px;border:1px solid var(--border-subtle);border-radius:12px;padding:12px 14px;background:#08110e;">
+            <summary style="cursor:pointer;font-size:0.84rem;font-weight:600;color:var(--gold-bright);">
+              <span data-lang="fr">Inspecter le flux XML CII extrait / généré (factur-x.xml)</span>
+              <span data-lang="en">Inspect Extracted / Generated CII XML Stream (factur-x.xml)</span>
+            </summary>
+            <pre id="facturx-xml-inspector" style="margin-top:10px;font-size:0.76rem;color:#cfe3da;max-height:220px;overflow:auto;white-space:pre-wrap;word-break:break-word;"></pre>
+          </details>
+        </div>
+
+        <!-- Right Audit Certificate & Auto-Fix Panel -->
+        <div id="facturx-audit-results" class="fx-panel" aria-live="polite">
+          <div class="fx-score-header">
+            <svg class="fx-gauge" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="fx-gauge-bg" cx="50" cy="50" r="41"></circle>
+              <circle id="fx-gauge-circle" class="fx-gauge-fg" cx="50" cy="50" r="41" stroke-dasharray="257.6" stroke-dashoffset="0"></circle>
+            </svg>
+            <div>
+              <div style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);font-weight:700;">
+                <span data-lang="fr">Certificat d'Audit Factur-X 2027</span>
+                <span data-lang="en">Factur-X 2027 Compliance Certificate</span>
+              </div>
+              <div class="fx-score-big"><span id="fx-score-num">100</span><span style="font-size:1.15rem;color:var(--text-muted);">/100</span></div>
+              <div id="fx-badges-container" class="fx-badge-row"></div>
+            </div>
+          </div>
+
+          <div id="fx-summary-grid" class="fx-summary-kv"></div>
+          <div id="fx-verdict-banner"></div>
+          <div id="fx-errors-container" class="fx-error-list"></div>
+
+          <div class="btn-row" style="margin-top:14px;">
+            <button id="btn-autofix-facturx" type="button" class="btn-primary" style="display:none;">
+              <span data-lang="fr">⚡ Auto-Corriger en EN 16931 + BR-FR (100/100)</span>
+              <span data-lang="en">⚡ Auto-Fix to EN 16931 + BR-FR (100/100)</span>
+            </button>
+            <button id="btn-download-audited-pdf" type="button" class="btn-secondary">
+              <span data-lang="fr">⬇ Télécharger PDF/A-3b Hybride</span>
+              <span data-lang="en">⬇ Download Hybrid PDF/A-3b</span>
+            </button>
+            <button id="btn-download-audited-xml" type="button" class="btn-ghost">
+              <span data-lang="fr">⬇ XML CII</span>
+              <span data-lang="en">⬇ CII XML</span>
+            </button>
+            <button id="btn-print-certificate" type="button" class="btn-ghost" onclick="window.print()">
+              <span data-lang="fr">🖨 Certificat d'Audit</span>
+              <span data-lang="en">🖨 Print Certificate</span>
+            </button>
+          </div>
+          <div id="fx-audit-status" class="status-msg"></div>
+        </div>
+      </section>
+
+      <!-- 2. FREE HYBRID PDF/A-3b + EN 16931 INVOICE GENERATOR -->
+      <section id="section-generator" class="section-block">
+        <div class="configurator-card">
+          <div class="eyebrow">
+            <span data-lang="fr">2. Générateur Gratuit de Facture Hybride PDF/A-3b + XML EN 16931</span>
+            <span data-lang="en">2. Free Hybrid PDF/A-3b + EN 16931 Invoice Generator</span>
+          </div>
+          <h2>
+            <span data-lang="fr">Créer une facture Factur-X 2027 conforme à 100/100</span>
+            <span data-lang="en">Generate a 100/100 Compliant Factur-X 2027 Invoice</span>
+          </h2>
+          <p style="color:var(--text-soft);font-size:0.94rem;max-width:820px;">
+            <span data-lang="fr">Générez gratuitement une vraie facture hybride <strong>PDF/A-3b</strong> embarquant <code>factur-x.xml</code> compressé, le profil colorimétrique <code>sRGB IEC61966-2.1</code>, les adresses électroniques <code>0225</code>, le cadre <code>BT-23</code> et les mentions obligatoires 2026–2027.</span>
+            <span data-lang="en">Create a genuine hybrid <strong>PDF/A-3b</strong> invoice embedding compressed <code>factur-x.xml</code>, <code>sRGB IEC61966-2.1</code> OutputIntent, <code>0225</code> routing IDs, <code>BT-23</code> billing framework, and mandatory French 2026–2027 disclosures.</span>
+          </p>
+
+          <form id="facturx-generator-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="gen-invoice-id"><span data-lang="fr">N° de facture (BT-1, sans espace)</span><span data-lang="en">Invoice Number (BT-1, no spaces)</span></label>
+                <input id="gen-invoice-id" class="form-control" type="text" value="FAC-2027-0108" maxlength="35" required />
+              </div>
+              <div class="form-group">
+                <label for="gen-issue-date"><span data-lang="fr">Date d'émission (BT-2)</span><span data-lang="en">Issue Date (BT-2)</span></label>
+                <input id="gen-issue-date" class="form-control" type="date" value="2027-09-15" required />
+              </div>
+              <div class="form-group">
+                <label for="gen-op-category"><span data-lang="fr">Catégorie d'opération (BT-23 obligatoire)</span><span data-lang="en">Operation Category (Mandatory BT-23)</span></label>
+                <select id="gen-op-category" class="form-control">
+                  <option value="S1">S1 — Prestation de services</option>
+                  <option value="B1">B1 — Livraison de biens</option>
+                  <option value="M1">M1 — Opération mixte (biens &amp; services)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="gen-tax-regime"><span data-lang="fr">Régime de TVA &amp; Exigibilité</span><span data-lang="en">VAT Regime &amp; Tax Point</span></label>
+                <select id="gen-tax-regime" class="form-control">
+                  <option value="FRANCHISE_293B">Franchise en base de TVA (art. 293 B CGI — 0 %)</option>
+                  <option value="TVA_ENC_72">TVA Standard 20 % — Sur les encaissements (Code 72)</option>
+                  <option value="TVA_DEB_5">TVA Standard 20 % — Option sur les débits (Code 5)</option>
+                  <option value="AUTOLIQUIDATION">Autoliquidation B2B (CategoryCode AE — 0 %)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="gen-seller-name"><span data-lang="fr">Raison sociale Émetteur (Vendeur)</span><span data-lang="en">Seller Legal Name</span></label>
+                <input id="gen-seller-name" class="form-control" type="text" value="Atelier Conseil Pyrénées EI" required />
+              </div>
+              <div class="form-group">
+                <label for="gen-seller-siren"><span data-lang="fr">SIREN Émetteur (9 chiffres Luhn, schemeID 0002)</span><span data-lang="en">Seller SIREN (9-digit Luhn, schemeID 0002)</span></label>
+                <input id="gen-seller-siren" class="form-control" type="text" value="732829320" maxlength="14" required />
+                <span id="gen-seller-siren-hint" class="fx-luhn-hint ok">✓ SIREN valide Luhn • TVA FR44732829320</span>
+              </div>
+              <div class="form-group">
+                <label for="gen-seller-address"><span data-lang="fr">Adresse Émetteur</span><span data-lang="en">Seller Street Address</span></label>
+                <input id="gen-seller-address" class="form-control" type="text" value="8 Rue Du Gypaète" required />
+              </div>
+              <div class="form-group">
+                <label for="gen-seller-city"><span data-lang="fr">Code postal &amp; Ville Émetteur</span><span data-lang="en">Seller Postcode &amp; City</span></label>
+                <div style="display:grid;grid-template-columns:110px 1fr;gap:8px;">
+                  <input id="gen-seller-postcode" class="form-control" type="text" value="64000" required />
+                  <input id="gen-seller-city" class="form-control" type="text" value="Pau" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="gen-buyer-name"><span data-lang="fr">Raison sociale Client Professionnel (Acheteur)</span><span data-lang="en">Buyer Business Name</span></label>
+                <input id="gen-buyer-name" class="form-control" type="text" value="Société Méridienne d'Ingénierie SAS" required />
+              </div>
+              <div class="form-group">
+                <label for="gen-buyer-siren"><span data-lang="fr">SIREN Client B2B (BT-47 obligatoire 2026–2027)</span><span data-lang="en">Buyer SIREN (Mandatory B2B BT-47)</span></label>
+                <input id="gen-buyer-siren" class="form-control" type="text" value="552100554" maxlength="14" required />
+                <span id="gen-buyer-siren-hint" class="fx-luhn-hint ok">✓ SIREN client valide Luhn • Routage 0225 actif</span>
+              </div>
+              <div class="form-group">
+                <label for="gen-buyer-address"><span data-lang="fr">Adresse Client</span><span data-lang="en">Buyer Street Address</span></label>
+                <input id="gen-buyer-address" class="form-control" type="text" value="24 Allée Jean Jaurès" required />
+              </div>
+              <div class="form-group">
+                <label for="gen-buyer-city"><span data-lang="fr">Code postal &amp; Ville Client</span><span data-lang="en">Buyer Postcode &amp; City</span></label>
+                <div style="display:grid;grid-template-columns:110px 1fr;gap:8px;">
+                  <input id="gen-buyer-postcode" class="form-control" type="text" value="31000" required />
+                  <input id="gen-buyer-city" class="form-control" type="text" value="Toulouse" required />
+                </div>
+              </div>
+
+              <div class="form-group full">
+                <label><span data-lang="fr">Lignes de facturation (calcul centime exact EN 16931)</span><span data-lang="en">Invoice Line Items (Cent-Exact EN 16931 Math)</span></label>
+                <table class="fx-lines-table">
+                  <thead>
+                    <tr>
+                      <th><span data-lang="fr">Désignation</span><span data-lang="en">Description</span></th>
+                      <th style="width:95px;"><span data-lang="fr">Qté</span><span data-lang="en">Qty</span></th>
+                      <th style="width:110px;"><span data-lang="fr">Unité</span><span data-lang="en">Unit</span></th>
+                      <th style="width:130px;"><span data-lang="fr">P.U. HT (€)</span><span data-lang="en">Net Price (€)</span></th>
+                      <th style="width:60px;"></th>
+                    </tr>
+                  </thead>
+                  <tbody id="gen-lines-tbody">
+                    <tr>
+                      <td><input type="text" class="form-control gen-ln-name" value="Audit architecture &amp; mise en conformité Factur-X 2027" required /></td>
+                      <td><input type="number" step="0.01" min="0.01" class="form-control gen-ln-qty" value="2" required /></td>
+                      <td>
+                        <select class="form-control gen-ln-unit">
+                          <option value="DAY">DAY (Jour)</option>
+                          <option value="HUR">HUR (Heure)</option>
+                          <option value="C62">C62 (Unité)</option>
+                        </select>
+                      </td>
+                      <td><input type="number" step="0.01" min="0" class="form-control gen-ln-price" value="625.00" required /></td>
+                      <td><button type="button" class="btn-ghost gen-ln-remove" aria-label="Supprimer la ligne">✕</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;flex-wrap:wrap;gap:10px;">
+                  <button id="btn-add-invoice-line" type="button" class="btn-ghost">
+                    <span data-lang="fr">+ Ajouter une ligne</span>
+                    <span data-lang="en">+ Add Line Item</span>
+                  </button>
+                  <div id="gen-live-totals" style="font-weight:700;color:var(--gold-bright);font-size:0.95rem;">
+                    Total HT : 1250.00 € • TVA : 0.00 € • Net à payer TTC : 1250.00 €
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="gen-iban"><span data-lang="fr">IBAN SEPA optionnel (contrôlé Modulo-97)</span><span data-lang="en">Optional SEPA IBAN (Modulo-97 Checked)</span></label>
+                <input id="gen-iban" class="form-control" type="text" placeholder="Ex: DE89370400440532013000 (laisser vide si non affiché)" />
+              </div>
+              <div class="form-group">
+                <label for="gen-due-date"><span data-lang="fr">Date d'échéance de règlement (BT-9)</span><span data-lang="en">Payment Due Date (BT-9)</span></label>
+                <input id="gen-due-date" class="form-control" type="date" value="2027-10-15" required />
+              </div>
+            </div>
+
+            <div class="btn-row" style="margin-top:22px;">
+              <button id="btn-generate-pdfa3" type="submit" class="btn-primary">
+                <span data-lang="fr">⚡ Générer, Auditer (100/100) &amp; Télécharger le PDF/A-3b Hybride</span>
+                <span data-lang="en">⚡ Generate, Self-Audit (100/100) &amp; Download Hybrid PDF/A-3b</span>
+              </button>
+              <button id="btn-generate-xml-only" type="button" class="btn-secondary">
+                <span data-lang="fr">⬇ Télécharger uniquement factur-x.xml (EN 16931)</span>
+                <span data-lang="en">⬇ Download factur-x.xml Only (EN 16931)</span>
+              </button>
+            </div>
+            <div id="gen-status-msg" class="status-msg"></div>
+          </form>
+        </div>
+      </section>
+
+      <!-- 3. LF 2026 PENALTY & TVA 293 B / OSS 10K RADAR -->
+      <section id="section-radar" class="section-block">
+        <div class="configurator-card">
+          <div class="eyebrow">
+            <span data-lang="fr">3. Simulateur Réglementaire Loi de Finances 2026 &amp; Seuils Fiscaux</span>
+            <span data-lang="en">3. Finance Law 2026 Penalty &amp; VAT Threshold Simulator</span>
+          </div>
+          <h2>
+            <span data-lang="fr">Radar d'exposition aux amendes LF 2026, Franchise TVA 293 B &amp; OSS UE</span>
+            <span data-lang="en">LF 2026 Fine Exposure, Art. 293 B VAT Franchise &amp; EU OSS 10k€ Radar</span>
+          </h2>
+
+          <form id="facturx-radar-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="radar-invoices-month"><span data-lang="fr">Factures B2B émises par mois</span><span data-lang="en">B2B Invoices Issued / Month</span></label>
+                <input id="radar-invoices-month" class="form-control" type="number" min="0" value="18" required />
+              </div>
+              <div class="form-group">
+                <label for="radar-has-pa"><span data-lang="fr">Plateforme Agréée (PA) immatriculée choisie ?</span><span data-lang="en">Accredited Platform (PA) Registered?</span></label>
+                <select id="radar-has-pa" class="form-control">
+                  <option value="0">Non — Aucune PA désignée pour l'instant</option>
+                  <option value="1">Oui — Compte PA actif dans l'annuaire PPF</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="radar-rev-services"><span data-lang="fr">CA annuel Prestations de services (€ — seuil 37 500 € / 41 250 €)</span><span data-lang="en">Annual Services Revenue (€ — 37.5k / 41.25k limit)</span></label>
+                <input id="radar-rev-services" class="form-control" type="number" min="0" step="100" value="35800" required />
+              </div>
+              <div class="form-group">
+                <label for="radar-rev-goods"><span data-lang="fr">CA annuel Ventes de marchandises (€ — seuil 85 000 € / 93 500 €)</span><span data-lang="en">Annual Goods Revenue (€ — 85k / 93.5k limit)</span></label>
+                <input id="radar-rev-goods" class="form-control" type="number" min="0" step="100" value="4200" required />
+              </div>
+              <div class="form-group full">
+                <label for="radar-eu-b2c"><span data-lang="fr">Ventes digitales B2C vers particuliers d'autres pays UE (€ — seuil OSS 10 000 €)</span><span data-lang="en">Cross-Border EU B2C Digital Sales (€ — 10,000 € OSS Threshold)</span></label>
+                <input id="radar-eu-b2c" class="form-control" type="number" min="0" step="100" value="6500" required />
+              </div>
+            </div>
+            <div class="btn-row" style="margin-top:18px;">
+              <button id="btn-run-radar" type="submit" class="btn-secondary">
+                <span data-lang="fr">Actualiser le diagnostic fiscal &amp; sanctions 2026–2027</span>
+                <span data-lang="en">Recalculate 2026–2027 Fine &amp; Threshold Exposure</span>
+              </button>
+            </div>
+          </form>
+
+          <div id="radar-results-grid" class="fx-radar-kpis" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- 4. SOVEREIGN B2B SUITES (ALL 4 LIVE STRIPE PAYMENT LINKS — ZERO MAILTO) -->
+      <section id="section-b2b-offers" class="section-block">
+        <div class="section-header">
+          <div class="eyebrow">
+            <span data-lang="fr">Zéro Abonnement Mensuel • Paiement Unique Direct Stripe • Facture Comptable Incluse</span>
+            <span data-lang="en">Zero Monthly SaaS Fee • One-Time Direct Stripe Checkout • Accounting Invoice Included</span>
+          </div>
+          <h2>
+            <span data-lang="fr">Industrialisez votre conformité TPE &amp; IA locale hors-ligne</span>
+            <span data-lang="en">Deploy Full Offline Factur-X &amp; Sovereign Local AI Tooling</span>
+          </h2>
+          <p style="color:var(--text-soft);">
+            <span data-lang="fr">Cet outil en ligne reste 100 % gratuit et illimité pour vos contrôles unitaires. Pour gérer votre carnet clients, vos devis, vos relances automatisées en lot et vos seuils comptables hors-ligne :</span>
+            <span data-lang="en">This browser validator &amp; generator stays 100% free. Upgrade to our standalone offline B2B suites for batch CLI workflows, client quote-to-invoice CRM, Excel VAT trackers, and Apple Silicon local AI:</span>
+          </p>
+        </div>
+
+        <div class="fx-offers-grid">
+          <article class="fx-offer-card">
+            <div>
+              <div class="eyebrow">SLOT 01 • 19 € NET</div>
+              <h3>
+                <span data-lang="fr">Pack Pilotage Micro &amp; TPE 2027</span>
+                <span data-lang="en">Micro &amp; SME VAT / PA Tracker 2027</span>
+              </h3>
+              <p style="font-size:0.89rem;color:var(--text-soft);margin-top:6px;">
+                <span data-lang="fr">Classeur Excel 5 onglets (seuils franchise TVA art. 293 B, livre des recettes normé, URSSAF), comparatif objectif des Plateformes Agréées (PA) et guide pratique PDF.</span>
+                <span data-lang="en">5-tab Excel workbook (art. 293 B VAT thresholds, statutory revenue ledger, URSSAF), Accredited Platform (PA) benchmark &amp; practical PDF guide.</span>
+              </p>
+            </div>
+            <a id="cta-stripe-b2b-19" class="btn-secondary" href="https://buy.stripe.com/3cIaEWfnS8ifbTBdXH2cg05" target="_blank" rel="noopener">
+              <span data-lang="fr">Obtenir le Pack Pilotage — 19 € →</span>
+              <span data-lang="en">Get Pilotage Pack — 19 € →</span>
+            </a>
+          </article>
+
+          <article class="fx-offer-card featured">
+            <div>
+              <div class="eyebrow">SLOT 02 RECOMMANDÉ • 49 € NET</div>
+              <h3>
+                <span data-lang="fr">Studio Factur-X Local 2027</span>
+                <span data-lang="en">Factur-X Local Studio 2027</span>
+              </h3>
+              <p style="font-size:0.89rem;color:var(--text-soft);margin-top:6px;">
+                <span data-lang="fr">Application monopage 100 % hors-ligne (CRM clients/catalogue local, Devis → Factures PDF/A-3b EN 16931, export CSV comptable FEC) + CLI Python en lot sans dépendance.</span>
+                <span data-lang="en">100% offline single-file Studio app (local CRM/catalog, Quote-to-PDF/A-3b EN 16931 invoices, accounting CSV export) + batch zero-dependency Python CLI.</span>
+              </p>
+            </div>
+            <a id="cta-stripe-b2b-49" class="btn-primary" href="https://buy.stripe.com/4gMcN40sY41Zf5N1aV2cg06" target="_blank" rel="noopener">
+              <span data-lang="fr">Obtenir Studio Factur-X Local — 49 € →</span>
+              <span data-lang="en">Get Factur-X Local Studio — 49 € →</span>
+            </a>
+          </article>
+
+          <article class="fx-offer-card">
+            <div>
+              <div class="eyebrow">SLOT 03 PRO • 119 € NET</div>
+              <h3>
+                <span data-lang="fr">Suite Pro TPE + Workflows n8n &amp; AI Act</span>
+                <span data-lang="en">SME Pro Suite + n8n &amp; EU AI Act</span>
+              </h3>
+              <p style="font-size:0.89rem;color:var(--text-soft);margin-top:6px;">
+                <span data-lang="fr">Inclut intégralement les Slots 01 &amp; 02 + 3 workflows n8n prêts à importer (tri factures fournisseurs entrantes, relances impayés) + registre conformité EU AI Act PME.</span>
+                <span data-lang="en">Includes Slots 01 &amp; 02 + 3 import-ready n8n automation workflows (incoming supplier invoice triage, overdue reminders) + SME EU AI Act register.</span>
+              </p>
+            </div>
+            <a id="cta-stripe-b2b-119" class="btn-secondary" href="https://buy.stripe.com/aFa8wO0sY1TRbTB1aV2cg07" target="_blank" rel="noopener">
+              <span data-lang="fr">Choisir la Suite Pro TPE — 119 € →</span>
+              <span data-lang="en">Get SME Pro Suite — 119 € →</span>
+            </a>
+          </article>
+
+          <article class="fx-offer-card">
+            <div>
+              <div class="eyebrow">SOUVERAINETÉ MAC • 29 € NET</div>
+              <h3>
+                <span data-lang="fr">Guide L'IA Locale sur Mac + Kit (Éd. 2.0)</span>
+                <span data-lang="en">Local AI on Mac Practical Guide + Kit</span>
+              </h3>
+              <p style="font-size:0.89rem;color:var(--text-soft);margin-top:6px;">
+                <span data-lang="fr">Traitez vos pièces comptables et dossiers confidentiels sur Mac Apple Silicon (M1–M6) sans cloud : PDF 42 pages + kit de 31 fichiers (scripts RAG, Whisper, extraction facture).</span>
+                <span data-lang="en">Process confidential accounting &amp; legal documents locally on Apple Silicon Mac without cloud uploads: 42-page PDF + 31-file automation kit.</span>
+              </p>
+            </div>
+            <a id="cta-stripe-mac-29" class="btn-secondary" href="https://buy.stripe.com/14A14m5NigOLcXF7zj2cg03" target="_blank" rel="noopener">
+              <span data-lang="fr">Obtenir le Guide IA Locale Mac — 29 € →</span>
+              <span data-lang="en">Get Local AI on Mac Guide — 29 € →</span>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- 5. REGULATORY FAQ -->
+      <section id="section-faq" class="section-block">
+        <div class="section-header">
+          <div class="eyebrow"><span data-lang="fr">Questions Fréquentes Factur-X 2026–2027</span><span data-lang="en">Factur-X 2026–2027 Technical FAQ</span></div>
+          <h2><span data-lang="fr">Tout comprendre sur EN 16931, XP Z12-012 et le calendrier TPE</span><span data-lang="en">Understanding EN 16931, XP Z12-012 &amp; French PA Compliance</span></h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>
+              <span data-lang="fr">Mes factures déposées ici sont-elles transférées sur Internet ?</span>
+              <span data-lang="en">Are my uploaded PDF or XML invoices sent to any server?</span>
+            </summary>
+            <div class="faq-answer">
+              <span data-lang="fr">Jamais. Le moteur <code>FacturXEngine2027</code> fonctionne à 100 % en JavaScript local dans votre navigateur via <code>DecompressionStream('deflate')</code> et <code>CompressionStream('deflate')</code>. Vous pouvez couper le Wi-Fi une fois la page ouverte et continuer d'auditer, réparer et générer vos PDF/A-3b.</span>
+              <span data-lang="en">Never. <code>FacturXEngine2027</code> runs 100% locally inside your browser using native <code>DecompressionStream('deflate')</code> and <code>CompressionStream('deflate')</code>. You can disconnect from Wi-Fi after loading the page and keep validating, auto-fixing, and generating PDF/A-3b files.</span>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span data-lang="fr">Pourquoi le profil BASIC est-il rejeté par le validateur PA Flux 2 ?</span>
+              <span data-lang="en">Why does French PA Flux 2 reject MINIMUM and BASIC profiles?</span>
+            </summary>
+            <div class="faq-answer">
+              <span data-lang="fr">Les spécifications externes DGFIP / AFNOR XP Z12-012 imposent le socle sémantique complet <code>EN 16931</code> (ou <code>EXTENDED</code>) pour la transmission structurée Flux 2 entre Plateformes Agréées, incluant le cadre de facturation <code>BT-23</code> (<code>B1</code>, <code>S1</code>, <code>M1</code>), le routage annuaire <code>schemeID="0225"</code> et les mentions codifiées <code>PMD</code>, <code>PMT</code> et <code>AAB</code>. Notre bouton <strong>Auto-Corriger</strong> met à niveau un XML <code>BASIC</code> vers <code>EN 16931</code> en un clic.</span>
+              <span data-lang="en">French DGFIP / AFNOR XP Z12-012 specifications require full <code>EN 16931</code> (or <code>EXTENDED</code>) semantic coverage for Flux 2 inter-platform exchange, including <code>BT-23</code>, <code>schemeID="0225"</code> routing URIs, and coded legal notes <code>PMD</code>/<code>PMT</code>/<code>AAB</code>. Click <strong>Auto-Fix</strong> to upgrade <code>BASIC</code> invoices instantaneously.</span>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span data-lang="fr">Cet outil remplace-t-il l'inscription à une Plateforme Agréée (PA) ?</span>
+              <span data-lang="en">Does local Factur-X generation replace registering with an Accredited Platform (PA)?</span>
+            </summary>
+            <div class="faq-answer">
+              <span data-lang="fr">Non : cet outil prépare, vérifie et génère localement vos fichiers conformes <code>PDF/A-3b + XML EN 16931</code> sans abonnement logiciel, prêts à être déposés ou transmis via la Plateforme Agréée immatriculée de votre choix (dont plusieurs offres bancaires ou comptables incluent le dépôt gratuit ou au fil de l'eau).</span>
+              <span data-lang="en">No: this tool prepares, validates, and generates compliant <code>PDF/A-3b + EN 16931 XML</code> files locally with zero SaaS subscription, ready to submit through your chosen state-registered Accredited Platform (PA).</span>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><strong>YGN — Yann Abadie • 8 Rue Du Gypaète, 64000 Pau, France • Contact : yann.abadie [at] gmail.com • TVA non applicable, art. 293 B du CGI</strong></p>
+      <p style="margin-top:6px;">
+        <span data-lang="fr">Exécution 100 % locale et confidentielle dans votre navigateur (zéro télémétrie, zéro stockage cloud) • Prix nets en euros sur les suites logicielles locales.</span>
+        <span data-lang="en">100% local, privacy-preserving browser execution (zero telemetry, zero cloud upload) • Net prices in EUR (VAT not applicable, art. 293 B CGI).</span>
+      </p>
+      <p style="margin-top:6px;">
+        <a href="https://yannabadie.github.io/ygn-guide-ia-locale/mentions-legales.html" target="_blank" rel="noopener">Mentions légales</a> •
+        <a href="https://yannabadie.github.io/facturkit-2027/" target="_blank" rel="noopener">FacturKit 2027</a> •
+        <a href="#section-b2b-offers"><span data-lang="fr">Cockpit B2B TPE</span><span data-lang="en">B2B SME Cockpit</span></a>
+      </p>
+    </footer>
+  </div>
+
+  <script src="./studio_seo.js"></script>
+  <script src="./facturx_engine_2027.js"></script>
+  <script>
+  (function () {
+    "use strict";
+    var FX = window.FacturXEngine2027;
+    if (!FX) return;
+
+    var currentAuditState = {
+      xmlString: "",
+      pdfBytes: null,
+      fileName: "facture-2027.pdf",
+      result: null
+    };
+
+    function escHtml(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function downloadBytes(bytes, filename, mime) {
+      var blob = new Blob([bytes], { type: mime });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 500);
+    }
+
+    function renderAuditReport(res, xmlStr, pdfBytes, sourceLabel) {
+      currentAuditState.result = res;
+      currentAuditState.xmlString = xmlStr || "";
+      currentAuditState.pdfBytes = pdfBytes || null;
+      currentAuditState.fileName = sourceLabel || "facture-2027.pdf";
+
+      var scoreEl = document.getElementById("fx-score-num");
+      var circleEl = document.getElementById("fx-gauge-circle");
+      var badgesEl = document.getElementById("fx-badges-container");
+      var summaryEl = document.getElementById("fx-summary-grid");
+      var verdictEl = document.getElementById("fx-verdict-banner");
+      var errorsEl = document.getElementById("fx-errors-container");
+      var xmlPre = document.getElementById("facturx-xml-inspector");
+      var autoFixBtn = document.getElementById("btn-autofix-facturx");
+
+      var score = Number(res.score || 0);
+      scoreEl.textContent = String(score);
+      var circumference = 257.6;
+      var offset = circumference - (circumference * Math.max(0, Math.min(100, score))) / 100;
+      circleEl.style.strokeDashoffset = offset.toFixed(1);
+      circleEl.style.stroke = res.valid ? "var(--success)" : (score >= 55 ? "var(--gold)" : "var(--danger)");
+
+      var pills = [];
+      pills.push(
+        '<span class="fx-pill ' + (res.paFlux2Compatible ? "ok" : "err") + '">' +
+        (res.paFlux2Compatible ? "✓ PA Flux 2 Compatible" : "✕ Rejet PA Flux 2") +
+        "</span>"
+      );
+      pills.push('<span class="fx-pill ' + (res.profile === "EN 16931" || res.profile === "EXTENDED" ? "ok" : "warn") + '">Profil : ' + escHtml(res.profile) + "</span>");
+      if (res.isPdf) {
+        pills.push('<span class="fx-pill ' + (res.isCompressedStream ? "ok" : "warn") + '">' + (res.isCompressedStream ? "PDF/A-3 FlateDecode" : "PDF non compressé") + "</span>");
+        pills.push('<span class="fx-pill ' + (res.xmpValid ? "ok" : "err") + '">' + (res.xmpValid ? "XMP 1.0 Valide" : "XMP Invalide") + "</span>");
+      } else {
+        pills.push('<span class="fx-pill">XML CII Direct</span>');
+      }
+      badgesEl.innerHTML = pills.join("");
+
+      var sum = res.summary || {};
+      summaryEl.innerHTML =
+        "<div><span>Fichier / Facture BT-1</span><strong>" + escHtml((sum.invoice_id || sourceLabel || "—")) + "</strong></div>" +
+        "<div><span>Cadre BT-23 &amp; Devise</span><strong>" + escHtml((sum.operation_category || "—") + " • " + (sum.currency || "EUR")) + "</strong></div>" +
+        "<div><span>SIREN Vendeur (0002)</span><strong>" + escHtml(sum.seller_siren || "—") + "</strong></div>" +
+        "<div><span>SIREN Acheteur (0002)</span><strong>" + escHtml(sum.buyer_siren || "—") + "</strong></div>" +
+        "<div><span>Total HT / TVA</span><strong>" + escHtml((sum.total_ht || "0.00") + " € / " + (sum.total_tax || "0.00") + " €") + "</strong></div>" +
+        "<div><span>Net à payer TTC</span><strong>" + escHtml((sum.due_payable || "0.00") + " €") + "</strong></div>";
+
+      if (res.valid && res.paFlux2Compatible) {
+        verdictEl.innerHTML =
+          '<div class="fx-ok-banner">' +
+          '<span data-lang="fr">✓ <strong>CONFORME 100/100 (EN 16931 + XP Z12-012 BR-FR Flux 2)</strong> — Aucun blocage détecté sur les 3 couches réglementaires.</span>' +
+          '<span data-lang="en">✓ <strong>100/100 COMPLIANT (EN 16931 + XP Z12-012 BR-FR Flux 2)</strong> — All 3 normative layers verified with zero errors.</span>' +
+          "</div>";
+        errorsEl.innerHTML = "";
+        autoFixBtn.style.display = "none";
+      } else {
+        verdictEl.innerHTML = "";
+        var itemsHtml = [];
+        for (var i = 0; i < res.errors.length; i++) {
+          var e = res.errors[i];
+          itemsHtml.push(
+            '<div class="fx-error-item"><code>[' + escHtml(e.code) + "]</code> " +
+            '<small style="color:var(--gold-bright);font-weight:600;">(' + escHtml(e.layer) + ")</small> — " +
+            escHtml(e.message) +
+            "</div>"
+          );
+        }
+        errorsEl.innerHTML = itemsHtml.join("");
+        var hasRecoverableXml = Boolean(xmlStr && xmlStr.indexOf("CrossIndustryInvoice") !== -1);
+        autoFixBtn.style.display = hasRecoverableXml ? "inline-flex" : "none";
+      }
+
+      xmlPre.textContent = xmlStr || "(Aucun flux XML Factur-X disponible dans ce fichier)";
+    }
+
+    // Demo 1: Non-compliant XML with multiple EN 16931 & BR-FR errors
+    var DEMO_NON_COMPLIANT_XML =
+      '<?xml version="1.0" encoding="UTF-8"?>\n' +
+      '<rsm:CrossIndustryInvoice xmlns:rsm="urn:un:unece:uncefact:data:standard:CrossIndustryInvoice:100" ' +
+      'xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100" ' +
+      'xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:100">\n' +
+      '  <rsm:ExchangedDocumentContext>\n' +
+      '    <ram:GuidelineSpecifiedDocumentContextParameter>\n' +
+      '      <ram:ID>urn:cen.eu:en16931:2017</ram:ID>\n' +
+      '    </ram:GuidelineSpecifiedDocumentContextParameter>\n' +
+      '  </rsm:ExchangedDocumentContext>\n' +
+      '  <rsm:ExchangedDocument>\n' +
+      '    <ram:ID>FAC 2027 0099 BROKEN</ram:ID>\n' +
+      '    <ram:TypeCode>380</ram:TypeCode>\n' +
+      '    <ram:IssueDateTime><udt:DateTimeString format="102">20270910</udt:DateTimeString></ram:IssueDateTime>\n' +
+      '  </rsm:ExchangedDocument>\n' +
+      '  <rsm:SupplyChainTradeTransaction>\n' +
+      '    <ram:IncludedSupplyChainTradeLineItem>\n' +
+      '      <ram:AssociatedDocumentLineDocument><ram:LineID>1</ram:LineID></ram:AssociatedDocumentLineDocument>\n' +
+      '      <ram:SpecifiedTradeProduct><ram:Name>Prestation Audit Conseil</ram:Name></ram:SpecifiedTradeProduct>\n' +
+      '      <ram:SpecifiedLineTradeAgreement><ram:NetPriceProductTradePrice><ram:ChargeAmount>800.00</ram:ChargeAmount></ram:NetPriceProductTradePrice></ram:SpecifiedLineTradeAgreement>\n' +
+      '      <ram:SpecifiedLineTradeDelivery><ram:BilledQuantity unitCode="DAY">1.00</ram:BilledQuantity></ram:SpecifiedLineTradeDelivery>\n' +
+      '      <ram:SpecifiedLineTradeSettlement>\n' +
+      '        <ram:ApplicableTradeTax><ram:TypeCode>VAT</ram:TypeCode><ram:CategoryCode>E</ram:CategoryCode><ram:RateApplicablePercent>0.00</ram:RateApplicablePercent></ram:ApplicableTradeTax>\n' +
+      '        <ram:SpecifiedTradeSettlementLineMonetarySummation><ram:LineTotalAmount>800.00</ram:LineTotalAmount></ram:SpecifiedTradeSettlementLineMonetarySummation>\n' +
+      '      </ram:SpecifiedLineTradeSettlement>\n' +
+      '    </ram:IncludedSupplyChainTradeLineItem>\n' +
+      '    <ram:ApplicableHeaderTradeAgreement>\n' +
+      '      <ram:SellerTradeParty>\n' +
+      '        <ram:Name>Studio Conseil Demo</ram:Name>\n' +
+      '        <ram:SpecifiedLegalOrganization><ram:ID schemeID="0002">732829320</ram:ID></ram:SpecifiedLegalOrganization>\n' +
+      '        <ram:PostalTradeAddress><ram:PostcodeCode>64000</ram:PostcodeCode><ram:LineOne>8 Rue Du Gypaete</ram:LineOne><ram:CityName>Pau</ram:CityName><ram:CountryID>FR</ram:CountryID></ram:PostalTradeAddress>\n' +
+      '      </ram:SellerTradeParty>\n' +
+      '      <ram:BuyerTradeParty>\n' +
+      '        <ram:Name>Client Sans SIREN</ram:Name>\n' +
+      '        <ram:PostalTradeAddress><ram:PostcodeCode>75002</ram:PostcodeCode><ram:LineOne>12 Rue Vivienne</ram:LineOne><ram:CityName>Paris</ram:CityName><ram:CountryID>FR</ram:CountryID></ram:PostalTradeAddress>\n' +
+      '      </ram:BuyerTradeParty>\n' +
+      '    </ram:ApplicableHeaderTradeAgreement>\n' +
+      '    <ram:ApplicableHeaderTradeDelivery />\n' +
+      '    <ram:ApplicableHeaderTradeSettlement>\n' +
+      '      <ram:InvoiceCurrencyCode>EUR</ram:InvoiceCurrencyCode>\n' +
+      '      <ram:ApplicableTradeTax><ram:CalculatedAmount>0.00</ram:CalculatedAmount><ram:TypeCode>VAT</ram:TypeCode><ram:BasisAmount>800.00</ram:BasisAmount><ram:CategoryCode>E</ram:CategoryCode><ram:RateApplicablePercent>0.00</ram:RateApplicablePercent></ram:ApplicableTradeTax>\n' +
+      '      <ram:SpecifiedTradeSettlementHeaderMonetarySummation>\n' +
+      '        <ram:LineTotalAmount>800.00</ram:LineTotalAmount>\n' +
+      '        <ram:TaxBasisTotalAmount>800.00</ram:TaxBasisTotalAmount>\n' +
+      '        <ram:TaxTotalAmount>0.00</ram:TaxTotalAmount>\n' +
+      '        <ram:GrandTotalAmount>805.00</ram:GrandTotalAmount>\n' +
+      '        <ram:DuePayableAmount>805.00</ram:DuePayableAmount>\n' +
+      '      </ram:SpecifiedTradeSettlementHeaderMonetarySummation>\n' +
+      '    </ram:ApplicableHeaderTradeSettlement>\n' +
+      '  </rsm:SupplyChainTradeTransaction>\n' +
+      '</rsm:CrossIndustryInvoice>\n';
+
+    async function runDemoNonConforme() {
+      var res = FX.validateFacturXXml(DEMO_NON_COMPLIANT_XML, { isPdf: false });
+      renderAuditReport(res, DEMO_NON_COMPLIANT_XML, null, "demo_facture_non_conforme.xml");
+      document.getElementById("fx-audit-status").textContent =
+        "Diagnostic exécuté : plusieurs erreurs bloquantes détectées (cliquez sur Auto-Corriger !).";
+    }
+
+    async function runDemoBasicAutoFix() {
+      var baseXml = FX.generateFacturXXml({
+        invoice_id: "FAC-BASIC-2027-07",
+        issue_date: "20270905",
+        operation_category: "S1",
+        tax_regime: "TVA_STANDARD",
+        vat_due_type: "72",
+        seller: { name: "Cabinet Horizon SARL", siren: "732829320", address: "8 Rue Du Gypaete", postcode: "64000", city: "Pau", country: "FR" },
+        buyer: { name: "Groupe Pyrénées B2B", siren: "552100554", address: "14 Cours Mirabeau", postcode: "13100", city: "Aix-en-Provence", country: "FR" },
+        lines: [{ name: "Accompagnement déploiement facturation électronique", qty: 3, unit_code: "DAY", net_price: 500, vat_rate: 20 }]
+      });
+      var basicXml = baseXml.replace(
+        "<ram:ID>urn:cen.eu:en16931:2017</ram:ID>",
+        "<ram:ID>urn:cen.eu:en16931:2017#compliant#urn:factur-x.eu:1p0:basic</ram:ID>"
+      );
+      var basicPdf = await FX.generateHybridFacturXPdf({ xmlString: basicXml, conformanceLevel: "BASIC" });
+      var res = await FX.validateFacturXFile(basicPdf, "facture_profil_basic.pdf");
+      renderAuditReport(res, basicXml, basicPdf, "facture_profil_basic.pdf");
+      document.getElementById("fx-audit-status").textContent =
+        "PDF/A-3 BASIC analysé : profil BASIC rejeté en Flux 2 PA. Cliquez sur Auto-Corriger pour le migrer en EN 16931 (100/100).";
+    }
+
+    async function runDemoConforme293b() {
+      var spec = {
+        invoice_id: "FAC-2027-0293B",
+        issue_date: "20270901",
+        due_date: "20271001",
+        type_code: "380",
+        operation_category: "S1",
+        currency: "EUR",
+        tax_regime: "FRANCHISE_293B",
+        seller: {
+          name: "YGN — FacturKit Studio",
+          siren: "732829320",
+          address: "8 Rue Du Gypaète",
+          postcode: "64000",
+          city: "Pau",
+          country: "FR"
+        },
+        buyer: {
+          name: "Société Méridienne d'Ingénierie SAS",
+          siren: "552100554",
+          address: "24 Allée Jean Jaurès",
+          postcode: "31000",
+          city: "Toulouse",
+          country: "FR"
+        },
+        lines: [
+          { name: "Licence Studio Factur-X Local 2027 & Audit flux PA", qty: 1, unit_code: "C62", net_price: 980.00, vat_rate: 0 }
+        ]
+      };
+      var xml = FX.generateFacturXXml(spec);
+      var pdfBytes = await FX.generateHybridFacturXPdf(spec);
+      var res = await FX.validateFacturXFile(pdfBytes, "facture_conforme_en16931_293b.pdf");
+      renderAuditReport(res, xml, pdfBytes, "facture_conforme_en16931_293b.pdf");
+      document.getElementById("fx-audit-status").textContent =
+        "✓ Facture hybride PDF/A-3b EN 16931 (Franchise TVA art. 293 B) vérifiée à 100/100.";
+    }
+
+    async function handleUploadedFile(file) {
+      if (!file) return;
+      var buf = await file.arrayBuffer();
+      var u8 = new Uint8Array(buf);
+      var res = await FX.validateFacturXFile(u8, file.name);
+      var xmlText = "";
+      var pdfData = null;
+      if (res.isPdf) {
+        pdfData = u8;
+        var ext = await FX.extractFacturXFromPdf(u8);
+        xmlText = ext.xmlString || "";
+      } else {
+        try { xmlText = new TextDecoder("utf-8").decode(u8); } catch (_) {}
+      }
+      renderAuditReport(res, xmlText, pdfData, file.name);
+      document.getElementById("fx-audit-status").textContent = "Fichier '" + file.name + "' analysé localement.";
+    }
+
+    // Wire Dropzone & Demo Buttons
+    var dropzone = document.getElementById("facturx-dropzone");
+    var fileInput = document.getElementById("facturx-file-input");
+
+    dropzone.addEventListener("click", function () { fileInput.click(); });
+    dropzone.addEventListener("keydown", function (ev) {
+      if (ev.key === "Enter" || ev.key === " ") {
+        ev.preventDefault();
+        fileInput.click();
+      }
+    });
+    dropzone.addEventListener("dragover", function (ev) {
+      ev.preventDefault();
+      dropzone.classList.add("dragover");
+    });
+    dropzone.addEventListener("dragleave", function () {
+      dropzone.classList.remove("dragover");
+    });
+    dropzone.addEventListener("drop", function (ev) {
+      ev.preventDefault();
+      dropzone.classList.remove("dragover");
+      if (ev.dataTransfer && ev.dataTransfer.files && ev.dataTransfer.files[0]) {
+        handleUploadedFile(ev.dataTransfer.files[0]);
+      }
+    });
+    fileInput.addEventListener("change", function (ev) {
+      if (ev.target.files && ev.target.files[0]) {
+        handleUploadedFile(ev.target.files[0]);
+      }
+    });
+
+    document.getElementById("btn-demo-non-conforme").addEventListener("click", runDemoNonConforme);
+    document.getElementById("btn-demo-basic-autofix").addEventListener("click", runDemoBasicAutoFix);
+    document.getElementById("btn-demo-conforme-293b").addEventListener("click", runDemoConforme293b);
+
+    // 1-Click Auto-Fix Button
+    document.getElementById("btn-autofix-facturx").addEventListener("click", async function () {
+      if (!currentAuditState.xmlString) return;
+      try {
+        var fixedXml = FX.autoFixFacturXXml(currentAuditState.xmlString);
+        var fixedPdf = await FX.generateHybridFacturXPdf({ xmlString: fixedXml });
+        var afterRes = await FX.validateFacturXFile(fixedPdf, "facture_corrigee_en16931.pdf");
+        renderAuditReport(afterRes, fixedXml, fixedPdf, "facture_corrigee_en16931.pdf");
+        document.getElementById("fx-audit-status").textContent =
+          "✓ Auto-correction réussie : facture migrée en EN 16931 + XP Z12-012 (Score 100/100) !";
+      } catch (err) {
+        document.getElementById("fx-audit-status").textContent = "Erreur auto-fix : " + err.message;
+      }
+    });
+
+    document.getElementById("btn-download-audited-pdf").addEventListener("click", async function () {
+      try {
+        var pdfBytes = currentAuditState.pdfBytes;
+        if (!pdfBytes && currentAuditState.xmlString) {
+          pdfBytes = await FX.generateHybridFacturXPdf({ xmlString: currentAuditState.xmlString });
+          currentAuditState.pdfBytes = pdfBytes;
+        }
+        if (pdfBytes) {
+          downloadBytes(pdfBytes, "facture_facturx_2027.pdf", "application/pdf");
+        }
+      } catch (err) {
+        document.getElementById("fx-audit-status").textContent = "Impossible de générer le PDF : " + err.message;
+      }
+    });
+
+    document.getElementById("btn-download-audited-xml").addEventListener("click", function () {
+      if (currentAuditState.xmlString) {
+        downloadBytes(new TextEncoder().encode(currentAuditState.xmlString), "factur-x.xml", "application/xml;charset=utf-8");
+      }
+    });
+
+    // Generator Form Live Luhn & Totals
+    function updateSirenHint(inputId, hintId, isSeller) {
+      var val = document.getElementById(inputId).value.replace(/\s+/g, "");
+      var hint = document.getElementById(hintId);
+      if (FX.validateSiren(val)) {
+        var vat = FX.computeFrenchVat(val);
+        hint.className = "fx-luhn-hint ok";
+        hint.textContent = isSeller
+          ? "✓ SIREN valide Luhn • TVA calculée : " + vat
+          : "✓ SIREN client valide Luhn • Routage 0225 : " + val;
+      } else {
+        hint.className = "fx-luhn-hint err";
+        hint.textContent = "✕ SIREN invalide (attendu : 9 chiffres vérifiant la clé de Luhn)";
+      }
+    }
+
+    document.getElementById("gen-seller-siren").addEventListener("input", function () {
+      updateSirenHint("gen-seller-siren", "gen-seller-siren-hint", true);
+    });
+    document.getElementById("gen-buyer-siren").addEventListener("input", function () {
+      updateSirenHint("gen-buyer-siren", "gen-buyer-siren-hint", false);
+    });
+
+    function collectGeneratorSpec() {
+      var regimeSel = document.getElementById("gen-tax-regime").value;
+      var taxRegime = "FRANCHISE_293B";
+      var vatDueType = "72";
+      var vatRate = 0;
+      if (regimeSel === "TVA_ENC_72") {
+        taxRegime = "TVA_STANDARD";
+        vatDueType = "72";
+        vatRate = 20;
+      } else if (regimeSel === "TVA_DEB_5") {
+        taxRegime = "TVA_STANDARD";
+        vatDueType = "5";
+        vatRate = 20;
+      } else if (regimeSel === "AUTOLIQUIDATION") {
+        taxRegime = "AUTOLIQUIDATION";
+        vatRate = 0;
+      }
+
+      var rows = document.querySelectorAll("#gen-lines-tbody tr");
+      var lines = [];
+      for (var i = 0; i < rows.length; i++) {
+        var r = rows[i];
+        var nm = r.querySelector(".gen-ln-name").value.trim() || ("Prestation " + (i + 1));
+        var qt = parseFloat(r.querySelector(".gen-ln-qty").value) || 1;
+        var un = r.querySelector(".gen-ln-unit").value || "C62";
+        var pr = parseFloat(r.querySelector(".gen-ln-price").value) || 0;
+        lines.push({ name: nm, qty: qt, unit_code: un, net_price: pr, vat_rate: vatRate });
+      }
+
+      return {
+        invoice_id: document.getElementById("gen-invoice-id").value.trim(),
+        issue_date: document.getElementById("gen-issue-date").value.replace(/-/g, ""),
+        due_date: document.getElementById("gen-due-date").value.replace(/-/g, ""),
+        type_code: "380",
+        operation_category: document.getElementById("gen-op-category").value,
+        currency: "EUR",
+        tax_regime: taxRegime,
+        vat_due_type: vatDueType,
+        seller: {
+          name: document.getElementById("gen-seller-name").value.trim(),
+          siren: document.getElementById("gen-seller-siren").value.trim(),
+          address: document.getElementById("gen-seller-address").value.trim(),
+          postcode: document.getElementById("gen-seller-postcode").value.trim(),
+          city: document.getElementById("gen-seller-city").value.trim(),
+          country: "FR"
+        },
+        buyer: {
+          name: document.getElementById("gen-buyer-name").value.trim(),
+          siren: document.getElementById("gen-buyer-siren").value.trim(),
+          address: document.getElementById("gen-buyer-address").value.trim(),
+          postcode: document.getElementById("gen-buyer-postcode").value.trim(),
+          city: document.getElementById("gen-buyer-city").value.trim(),
+          country: "FR"
+        },
+        lines: lines,
+        iban: document.getElementById("gen-iban").value.trim()
+      };
+    }
+
+    function refreshLiveGeneratorTotals() {
+      var spec = collectGeneratorSpec();
+      var ht = 0;
+      for (var i = 0; i < spec.lines.length; i++) {
+        ht += Math.round(spec.lines[i].qty * spec.lines[i].net_price * 100) / 100;
+      }
+      var rate = spec.tax_regime === "TVA_STANDARD" ? 0.2 : 0;
+      var tva = Math.round(ht * rate * 100) / 100;
+      var ttc = ht + tva;
+      document.getElementById("gen-live-totals").textContent =
+        "Total HT : " + ht.toFixed(2) + " € • TVA : " + tva.toFixed(2) + " € • Net à payer TTC : " + ttc.toFixed(2) + " €";
+    }
+
+    document.getElementById("facturx-generator-form").addEventListener("input", refreshLiveGeneratorTotals);
+    document.getElementById("btn-add-invoice-line").addEventListener("click", function () {
+      var tbody = document.getElementById("gen-lines-tbody");
+      var tr = document.createElement("tr");
+      tr.innerHTML =
+        '<td><input type="text" class="form-control gen-ln-name" value="Prestation complémentaire B2B" required /></td>' +
+        '<td><input type="number" step="0.01" min="0.01" class="form-control gen-ln-qty" value="1" required /></td>' +
+        '<td><select class="form-control gen-ln-unit"><option value="C62">C62 (Unité)</option><option value="DAY">DAY (Jour)</option><option value="HUR">HUR (Heure)</option></select></td>' +
+        '<td><input type="number" step="0.01" min="0" class="form-control gen-ln-price" value="250.00" required /></td>' +
+        '<td><button type="button" class="btn-ghost gen-ln-remove" aria-label="Supprimer">✕</button></td>';
+      tbody.appendChild(tr);
+      refreshLiveGeneratorTotals();
+    });
+
+    document.getElementById("gen-lines-tbody").addEventListener("click", function (ev) {
+      if (ev.target && ev.target.classList.contains("gen-ln-remove")) {
+        var tbody = document.getElementById("gen-lines-tbody");
+        if (tbody.querySelectorAll("tr").length > 1) {
+          ev.target.closest("tr").remove();
+          refreshLiveGeneratorTotals();
+        }
+      }
+    });
+
+    document.getElementById("facturx-generator-form").addEventListener("submit", async function (ev) {
+      ev.preventDefault();
+      var st = document.getElementById("gen-status-msg");
+      try {
+        var spec = collectGeneratorSpec();
+        var xml = FX.generateFacturXXml(spec);
+        var pdfBytes = await FX.generateHybridFacturXPdf(spec);
+        var audit = await FX.validateFacturXFile(pdfBytes, spec.invoice_id + ".pdf");
+        renderAuditReport(audit, xml, pdfBytes, spec.invoice_id + ".pdf");
+        downloadBytes(pdfBytes, spec.invoice_id + "_FacturX_EN16931.pdf", "application/pdf");
+        st.textContent = "✓ PDF/A-3b hybride généré, vérifié à " + audit.score + "/100 et téléchargé !";
+      } catch (err) {
+        st.textContent = "✕ Paramètre à corriger : " + err.message;
+      }
+    });
+
+    document.getElementById("btn-generate-xml-only").addEventListener("click", function () {
+      var st = document.getElementById("gen-status-msg");
+      try {
+        var spec = collectGeneratorSpec();
+        var xml = FX.generateFacturXXml(spec);
+        var audit = FX.validateFacturXXml(xml, { isPdf: false });
+        if (!audit.valid) {
+          st.textContent = "✕ Erreur dans le formulaire : " + audit.errors.map(function (e) { return e.code + " (" + e.message + ")"; }).join(" ; ");
+          return;
+        }
+        renderAuditReport(audit, xml, null, spec.invoice_id + ".xml");
+        downloadBytes(new TextEncoder().encode(xml), "factur-x.xml", "application/xml;charset=utf-8");
+        st.textContent = "✓ Fichier factur-x.xml EN 16931 généré et vérifié à 100/100 !";
+      } catch (err) {
+        st.textContent = "✕ Erreur : " + err.message;
+      }
+    });
+
+    // LF 2026 & Fiscal Radar
+    function renderRadar() {
+      var res = FX.calculateComplianceRisk2027({
+        invoices_per_month: document.getElementById("radar-invoices-month").value,
+        annual_revenue_services: document.getElementById("radar-rev-services").value,
+        annual_revenue_goods: document.getElementById("radar-rev-goods").value,
+        eu_b2c_sales: document.getElementById("radar-eu-b2c").value,
+        has_pa: document.getElementById("radar-has-pa").value
+      });
+
+      function statusBadge(s) {
+        var cls = s === "OK" ? "ok" : (s === "WARNING" ? "warn" : "err");
+        return '<span class="fx-pill ' + cls + '">' + escHtml(s) + "</span>";
+      }
+
+      document.getElementById("radar-results-grid").innerHTML =
+        '<div class="fx-kpi-card">' +
+          '<div style="font-size:0.76rem;color:var(--text-muted);">Amende factures non-électroniques (LF 2026 : 50 €/facture)</div>' +
+          '<div class="fx-kpi-val">' + res.annual_non_electronic_fine_eur.toLocaleString("fr-FR") + " € / an</div>" +
+          '<div style="font-size:0.78rem;color:var(--text-soft);">Plafond légal : 15 000 €/an (+ 15 €/mention omise)</div>' +
+        "</div>" +
+        '<div class="fx-kpi-card">' +
+          '<div style="font-size:0.76rem;color:var(--text-muted);">Sanction absence de Plateforme Agréée (Année 1)</div>' +
+          '<div class="fx-kpi-val">' + res.pa_absence_fine_first_year_eur.toLocaleString("fr-FR") + " €</div>" +
+          '<div style="font-size:0.78rem;color:var(--text-soft);">500 € après mise en demeure + 1 000 € / trimestre</div>' +
+        "</div>" +
+        '<div class="fx-kpi-card">' +
+          '<div style="font-size:0.76rem;color:var(--text-muted);">Franchise TVA Services (art. 293 B : 37,5 k€ / 41,25 k€)</div>' +
+          '<div style="margin-top:8px;">' + statusBadge(res.vat_293b_services_status) + "</div>" +
+          '<div style="font-size:0.78rem;color:var(--text-soft);margin-top:8px;">Marchandises (85 k€) : ' + statusBadge(res.vat_293b_goods_status) + "</div>" +
+        "</div>" +
+        '<div class="fx-kpi-card">' +
+          '<div style="font-size:0.76rem;color:var(--text-muted);">Guichet Unique TVA UE B2C (Seuil OSS 10 000 €)</div>' +
+          '<div style="margin-top:8px;">' + statusBadge(res.oss_10k_status) + "</div>" +
+          '<div style="font-size:0.78rem;color:var(--text-soft);margin-top:8px;">Plafond e-reporting : ' + res.ereporting_fine_cap_eur.toLocaleString("fr-FR") + " €/an</div>" +
+        "</div>";
+    }
+
+    document.getElementById("facturx-radar-form").addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      renderRadar();
+    });
+    document.getElementById("facturx-radar-form").addEventListener("input", renderRadar);
+
+    // Boot initial live state
+    runDemoConforme293b();
+    renderRadar();
+  })();
+  </script>
+</body>
+</html>

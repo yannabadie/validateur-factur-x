@@ -1,0 +1,21 @@
+# Validateur Factur-X gratuit 2026/2027
+
+> Outil gratuit, 100 % navigateur (aucune facture envoyée sur un serveur), qui vérifie un PDF/A-3 Factur-X ou un XML CII : profil (EN 16931 / EXTENDED acceptés pour les Plateformes Agréées, MINIMUM / BASIC WL / BASIC refusés), totaux au centime (BR-CO-10..17), règles françaises BR-FR (SIREN, catégorie d'opération BT-23, notes PMD/PMT/AAB), franchise art. 293 B, IBAN. Propose une correction automatique et génère un XML EN 16931 conforme.
+
+## Page
+- [Validateur Factur-X gratuit](https://yannabadie.github.io/validateur-factur-x/)
+
+## Calendrier légal (France)
+- 1er septembre 2026 : réception obligatoire des factures électroniques pour toutes les entreprises.
+- 1er septembre 2027 : émission obligatoire pour les PME, TPE et micro-entreprises.
+
+## Offres payantes (Stripe, paiement unique)
+- Pack Pilotage Micro & TPE 2027 — 19 € : https://buy.stripe.com/3cIaEWfnS8ifbTBdXH2cg05
+- Studio Factur-X Local 2027 — 49 € : https://buy.stripe.com/4gMcN40sY41Zf5N1aV2cg06
+- Suite Pro TPE + n8n & AI Act — 119 € : https://buy.stripe.com/aFa8wO0sY1TRbTB1aV2cg07
+- Guide IA locale sur Mac — 29 € : https://buy.stripe.com/14A14m5NigOLcXF7zj2cg03
+
+## Éditeur
+- YGN — Yann Abadie, micro-entreprise, Pau (TVA non applicable, art. 293 B du CGI).
+- Vitrine : https://yannabadie.github.io/cozy-festive-studio-2026/
+- FacturKit 2027 : https://yannabadie.github.io/facturkit-2027/
